@@ -3,4 +3,4 @@ const app = require('./app');
 const server = awsServerlessExpress.createServer(app)
 
 
-module.exports.universal = (event, context) => awsServerlessExpress.proxy(server, event, context);
+module.exports.handler = (event, context) => awsServerlessExpress.proxy(server, event, context);
